@@ -1,0 +1,78 @@
+:root {
+  --background: #333941;
+  --content: #e867ed;
+  --selection: #28b5ed;
+}
+
+::selection {
+  color: var(--background);
+  background-color: var(--selection);
+}
+
+body {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  color: white;
+  margin: 5%;
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 5%;
+  color: var(--content);
+}
+
+.snippet {
+  padding: 2%;
+  margin: 4%;
+  border: dotted white 2px;
+}
+
+.snippet:hover {
+  box-shadow: 0 0 20px var(--content);
+}
+
+.snippet:hover > h2 {
+  box-shadow: 0 0 20px var(--content);
+}
+
+.snippet p {
+  color: var(--content);
+  margin: -1.5em 0.5em 0.5em 0.5em;
+}
+
+.snippet h2 {
+  padding: 1%;
+  font-size: 2em;
+  background-color: var(--background);
+  color: var(--content);
+  position: relative;
+  top: -1em;
+  border: solid white 2px;
+  border-radius: 10px;
+}
+
+.snippet div pre {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  line-height: 1.5em;
+  background-color: var(--content);
+  user-select: all;
+  text-align: left;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main section {
+    flex: 1 0 350px;
+  }
+}
